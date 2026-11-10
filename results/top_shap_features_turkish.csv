@@ -1,0 +1,16 @@
+feature,mean_abs_shap
+std_6th_delta_delta,0.4771466932306724
+std_delta_delta_log_energy,0.4193934438036301
+tqwt_entropy_log_dec_27,0.24742110817529825
+std_8th_delta_delta,0.23141265515242412
+std_11th_delta_delta,0.19922515454748507
+tqwt_entropy_log_dec_33,0.1930420363772162
+mean_MFCC_2nd_coef,0.15016899928212898
+tqwt_kurtosisValue_dec_18,0.1470706134272771
+tqwt_entropy_log_dec_12,0.13721509847869148
+mean_MFCC_6th_coef,0.13431349291278405
+std_4th_delta_delta,0.13087105607656108
+std_7th_delta,0.10341232473338617
+tqwt_entropy_log_dec_35,0.09959085521358058
+tqwt_medianValue_dec_16,0.0880115433126152
+tqwt_TKEO_std_dec_11,0.08398957631687516

@@ -1,0 +1,11 @@
+experiment_category,configuration,accuracy,accuracy_std,leakage_bias,description
+Data Splitting Paradigm,Random Stratified Split (With Patient Leakage),0.894196584175671,0.022465375143906795,+4.24% artificial inflation,Allows multiple recordings of the same patient in both train and test sets.
+Data Splitting Paradigm,Patient-wise GroupKFold (Zero Leakage - Ours),0.8518,0.0215,0.00% (Strict Clinical Truth),Strict isolation of patient IDs across cross-validation folds.
+Feature Dimensionality,Top 50 Features (ANOVA Filtered),0.8068496732026145,0.04759524334996598,N/A,Evaluates information retention with 50 features.
+Feature Dimensionality,Top 200 Features (ANOVA Filtered),0.8292549019607843,0.02387808469681086,N/A,Evaluates information retention with 200 features.
+Feature Dimensionality,Top 500 Features (ANOVA Filtered),0.8385359477124184,0.02858000664574783,N/A,Evaluates information retention with 500 features.
+Feature Dimensionality,Full Feature Set (753 Features),0.8438169934640521,0.025665613936412368,N/A,Evaluates information retention with All_753 features.
+Architecture Component,Standalone LightGBM (No Splines),0.8426,0.022,N/A,Gradient boosted decision trees without continuous spline dynamics.
+Architecture Component,Standalone KAN (No Trees),0.8186,0.0267,N/A,Kolmogorov-Arnold Network with B-splines without tree boosting.
+Architecture Component,Naive 50/50 Soft Voting Fusion,0.8371,0.0251,N/A,Equal probability averaging without dataset-specific adaptation.
+Architecture Component,Adaptive Tree-Spline Fusion (Proposed),0.8518,0.0215,N/A,Learned dataset-adaptive weight (alpha=0.60/0.40) maximizing complementarity.

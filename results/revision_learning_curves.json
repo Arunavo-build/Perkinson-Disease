@@ -1,0 +1,611 @@
+{
+  "directionality_analysis": {
+    "MFCC_2": {
+      "description": "2nd Mel-Frequency Cepstral Coefficient",
+      "tr_col": "mean_MFCC_2nd_coef",
+      "bn_col": "MFCC_2",
+      "tr_pd_mean": 1.6509932181560283,
+      "tr_pd_sd": 1.4356306339904232,
+      "tr_hc_mean": 0.126563203125,
+      "tr_hc_sd": 1.765964601813755,
+      "tr_cohen_d": 0.9472652288671233,
+      "tr_p": 6.01600850106694e-24,
+      "bn_pd_mean": 0.21478443726,
+      "bn_pd_sd": 0.18504788711323059,
+      "bn_hc_mean": 0.018988592582222224,
+      "bn_hc_sd": 0.22303981741604337,
+      "bn_cohen_d": 0.9554456760145134,
+      "bn_p": 1.0310906161416976e-37,
+      "directional_consistency": "Consistent Sign"
+    },
+    "Delta_MFCC_2": {
+      "description": "1st-Order Velocity of 2nd MFCC",
+      "tr_col": "mean_2nd_delta",
+      "bn_col": "Delta_MFCC_2",
+      "tr_pd_mean": 0.0006994767021276596,
+      "tr_pd_sd": 0.004653326087194781,
+      "tr_hc_mean": 0.001930601072916667,
+      "tr_hc_sd": 0.005732956509825874,
+      "tr_cohen_d": -0.23579643725754199,
+      "tr_p": 0.012739821782464817,
+      "bn_pd_mean": 1.789870310488889,
+      "bn_pd_sd": 1.5420657259563137,
+      "bn_hc_mean": 0.1582382716377778,
+      "bn_hc_sd": 1.858665145142799,
+      "bn_cohen_d": 0.9554457169612123,
+      "bn_p": 1.0310906161416976e-37,
+      "directional_consistency": "Opposite Polarity (Sign Flip)"
+    },
+    "Delta_MFCC_6": {
+      "description": "1st-Order Velocity of 6th MFCC",
+      "tr_col": "mean_6th_delta",
+      "bn_col": "Delta_MFCC_6",
+      "tr_pd_mean": 0.0008736162943262411,
+      "tr_pd_sd": 0.0037789654661204266,
+      "tr_hc_mean": 0.0006783403124999999,
+      "tr_hc_sd": 0.00347319535864384,
+      "tr_cohen_d": 0.05380523413362377,
+      "tr_p": 0.3755544661227943,
+      "bn_pd_mean": -1.3058667442244445,
+      "bn_pd_sd": 0.9508113497936137,
+      "bn_hc_mean": -1.1451598218244445,
+      "bn_hc_sd": 0.6966675138663746,
+      "bn_cohen_d": -0.1928136734819264,
+      "bn_p": 0.01928785337387162,
+      "directional_consistency": "Opposite Polarity (Sign Flip)"
+    },
+    "Log_Energy_Accel": {
+      "description": "Std. Dev. of Log-Energy Acceleration",
+      "tr_col": "std_delta_delta_log_energy",
+      "bn_col": "std_delta_delta_log_energy",
+      "tr_pd_mean": 0.015588569680851063,
+      "tr_pd_sd": 0.009634696550189857,
+      "tr_hc_mean": 0.008828908854166666,
+      "tr_hc_sd": 0.005373476922810191,
+      "tr_cohen_d": 0.8665450496685724,
+      "tr_p": 7.604148043768835e-31,
+      "bn_pd_mean": 0.016685727422222223,
+      "bn_pd_sd": 0.010062407407894413,
+      "bn_hc_mean": 0.009201146468888888,
+      "bn_hc_sd": 0.00598772908119718,
+      "bn_cohen_d": 0.903972893789478,
+      "bn_p": 6.940662978209792e-53,
+      "directional_consistency": "Consistent Sign"
+    },
+    "HNR_Harmonicity": {
+      "description": "Harmonics-to-Noise Ratio (dB)",
+      "tr_col": "meanHarmToNoiseHarmonicity",
+      "bn_col": "HNR",
+      "tr_pd_mean": 18.1737695035461,
+      "tr_pd_sd": 5.520623277529749,
+      "tr_hc_mean": 20.874354166666667,
+      "tr_hc_sd": 5.226348779221109,
+      "tr_cohen_d": -0.502387610681065,
+      "tr_p": 6.016005691233293e-11,
+      "bn_pd_mean": 3.2300284977777776,
+      "bn_pd_sd": 0.046826309878398205,
+      "bn_hc_mean": 3.231337921926667,
+      "bn_hc_sd": 0.08921745366233531,
+      "bn_cohen_d": -0.01837848450258939,
+      "bn_p": 0.21981396545409593,
+      "directional_consistency": "Consistent Sign"
+    },
+    "AutoCorr_Harm": {
+      "description": "Autocorrelation Harmonicity",
+      "tr_col": "meanAutoCorrHarmonicity",
+      "bn_col": "AutoCorrHarmonicity",
+      "tr_pd_mean": 0.9573135709219858,
+      "tr_pd_sd": 0.06786706959269406,
+      "tr_hc_mean": 0.9738299270833334,
+      "tr_hc_sd": 0.049204893170408874,
+      "tr_cohen_d": -0.27863926329173266,
+      "tr_p": 1.971891001340421e-10,
+      "bn_pd_mean": 1.021822491488889,
+      "bn_pd_sd": 0.0773358843275658,
+      "bn_hc_mean": 1.038998485468889,
+      "bn_hc_sd": 0.056370173969138855,
+      "bn_cohen_d": -0.25382019116151333,
+      "bn_p": 1.55254290621768e-06,
+      "directional_consistency": "Consistent Sign"
+    },
+    "Local_Jitter": {
+      "description": "Local Cycle-to-Cycle Pitch Jitter (%)",
+      "tr_col": "locPctJitter",
+      "bn_col": "locPctJitter",
+      "tr_pd_mean": 0.0026373696010638294,
+      "tr_pd_sd": 0.002886189900010339,
+      "tr_hc_mean": 0.00140515625,
+      "tr_hc_sd": 0.00124722106791563,
+      "tr_cohen_d": 0.5542379807654724,
+      "tr_p": 9.1984046564592e-19,
+      "bn_pd_mean": 0.002938449348888889,
+      "bn_pd_sd": 0.0032984231736581707,
+      "bn_hc_mean": 0.0014326437866666666,
+      "bn_hc_sd": 0.0012215074237129607,
+      "bn_cohen_d": 0.6054355007607475,
+      "bn_p": 3.6896776170871746e-34,
+      "directional_consistency": "Consistent Sign"
+    },
+    "Local_Shimmer": {
+      "description": "Local Cycle-to-Cycle Amplitude Shimmer",
+      "tr_col": "locShimmer",
+      "bn_col": "locShimmer",
+      "tr_pd_mean": 0.07152440603900709,
+      "tr_pd_sd": 0.04260827978494048,
+      "tr_hc_mean": 0.055572916666666666,
+      "tr_hc_sd": 0.041684391261314936,
+      "tr_cohen_d": 0.3784558570136562,
+      "tr_p": 1.6940622380623727e-09,
+      "bn_pd_mean": 0.07747768945777779,
+      "bn_pd_sd": 0.04648863940580544,
+      "bn_hc_mean": 0.05824940214222221,
+      "bn_hc_sd": 0.04258535231598898,
+      "bn_cohen_d": 0.4313233877282562,
+      "bn_p": 9.187150024099377e-16,
+      "directional_consistency": "Consistent Sign"
+    },
+    "Formant_F1": {
+      "description": "First Vocal Tract Formant Frequency F1 (Hz)",
+      "tr_col": "f1",
+      "bn_col": "f1",
+      "tr_pd_mean": 623.6957244870567,
+      "tr_pd_sd": 130.56505880219157,
+      "tr_hc_mean": 716.1434779151042,
+      "tr_hc_sd": 123.16275526871674,
+      "tr_cohen_d": -0.7284060375589921,
+      "tr_p": 1.4822614989913883e-14,
+      "bn_pd_mean": 664.0427728731112,
+      "bn_pd_sd": 143.04819177726674,
+      "bn_hc_mean": 758.2388874762223,
+      "bn_hc_sd": 136.25948441047203,
+      "bn_cohen_d": -0.6742979979970197,
+      "bn_p": 8.236708313958268e-20,
+      "directional_consistency": "Consistent Sign"
+    }
+  },
+  "homologous_mapping_27": [
+    {
+      "Index": 1,
+      "Feature_Category": "Glottal Pulse Periodicity",
+      "Turkish_UCI_Column": "numPulses",
+      "Bengali_BenSParX_Column": "numPulses",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 2,
+      "Feature_Category": "Glottal Pulse Periodicity",
+      "Turkish_UCI_Column": "numPeriodsPulses",
+      "Bengali_BenSParX_Column": "numPeriodsPulses",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 3,
+      "Feature_Category": "Glottal Pulse Periodicity",
+      "Turkish_UCI_Column": "meanPeriodPulses",
+      "Bengali_BenSParX_Column": "meanPeriodPulses",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 4,
+      "Feature_Category": "Glottal Pulse Periodicity",
+      "Turkish_UCI_Column": "stdDevPeriodPulses",
+      "Bengali_BenSParX_Column": "stdDevPeriodPulses",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 5,
+      "Feature_Category": "Fundamental Frequency Perturbation (Jitter)",
+      "Turkish_UCI_Column": "locPctJitter",
+      "Bengali_BenSParX_Column": "locPctJitter",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 6,
+      "Feature_Category": "Fundamental Frequency Perturbation (Jitter)",
+      "Turkish_UCI_Column": "locAbsJitter",
+      "Bengali_BenSParX_Column": "locAbsJitter",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 7,
+      "Feature_Category": "Fundamental Frequency Perturbation (Jitter)",
+      "Turkish_UCI_Column": "rapJitter",
+      "Bengali_BenSParX_Column": "rapJitter",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 8,
+      "Feature_Category": "Fundamental Frequency Perturbation (Jitter)",
+      "Turkish_UCI_Column": "ppq5Jitter",
+      "Bengali_BenSParX_Column": "ppq5Jitter",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 9,
+      "Feature_Category": "Fundamental Frequency Perturbation (Jitter)",
+      "Turkish_UCI_Column": "ddpJitter",
+      "Bengali_BenSParX_Column": "ddpJitter",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 10,
+      "Feature_Category": "Amplitude Perturbation (Shimmer)",
+      "Turkish_UCI_Column": "locShimmer",
+      "Bengali_BenSParX_Column": "locShimmer",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 11,
+      "Feature_Category": "Amplitude Perturbation (Shimmer)",
+      "Turkish_UCI_Column": "locDbShimmer",
+      "Bengali_BenSParX_Column": "locDbShimmer",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 12,
+      "Feature_Category": "Amplitude Perturbation (Shimmer)",
+      "Turkish_UCI_Column": "apq3Shimmer",
+      "Bengali_BenSParX_Column": "apq3Shimmer",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 13,
+      "Feature_Category": "Amplitude Perturbation (Shimmer)",
+      "Turkish_UCI_Column": "apq5Shimmer",
+      "Bengali_BenSParX_Column": "apq5Shimmer",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 14,
+      "Feature_Category": "Amplitude Perturbation (Shimmer)",
+      "Turkish_UCI_Column": "apq11Shimmer",
+      "Bengali_BenSParX_Column": "apq11Shimmer",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 15,
+      "Feature_Category": "Amplitude Perturbation (Shimmer)",
+      "Turkish_UCI_Column": "ddaShimmer",
+      "Bengali_BenSParX_Column": "ddaShimmer",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 16,
+      "Feature_Category": "Glottal Harmonic-to-Noise Ratio",
+      "Turkish_UCI_Column": "meanAutoCorrHarmonicity",
+      "Bengali_BenSParX_Column": "meanAutoCorrHarmonicity",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 17,
+      "Feature_Category": "Vocal Pitch & Subglottal Intensity",
+      "Turkish_UCI_Column": "minIntensity",
+      "Bengali_BenSParX_Column": "minIntensity",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 18,
+      "Feature_Category": "Vocal Pitch & Subglottal Intensity",
+      "Turkish_UCI_Column": "maxIntensity",
+      "Bengali_BenSParX_Column": "maxIntensity",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 19,
+      "Feature_Category": "Vocal Pitch & Subglottal Intensity",
+      "Turkish_UCI_Column": "meanIntensity",
+      "Bengali_BenSParX_Column": "meanIntensity",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 20,
+      "Feature_Category": "Vocal Tract Formant Frequencies & Bandwidths",
+      "Turkish_UCI_Column": "f1",
+      "Bengali_BenSParX_Column": "f1",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 21,
+      "Feature_Category": "Vocal Tract Formant Frequencies & Bandwidths",
+      "Turkish_UCI_Column": "f2",
+      "Bengali_BenSParX_Column": "f2",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 22,
+      "Feature_Category": "Vocal Tract Formant Frequencies & Bandwidths",
+      "Turkish_UCI_Column": "f3",
+      "Bengali_BenSParX_Column": "f3",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 23,
+      "Feature_Category": "Vocal Tract Formant Frequencies & Bandwidths",
+      "Turkish_UCI_Column": "f4",
+      "Bengali_BenSParX_Column": "f4",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 24,
+      "Feature_Category": "Dynamic Log-Energy Kinematics",
+      "Turkish_UCI_Column": "mean_Log_energy",
+      "Bengali_BenSParX_Column": "mean_Log_energy",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 25,
+      "Feature_Category": "Dynamic Log-Energy Kinematics",
+      "Turkish_UCI_Column": "std_Log_energy",
+      "Bengali_BenSParX_Column": "std_Log_energy",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 26,
+      "Feature_Category": "Dynamic Log-Energy Kinematics",
+      "Turkish_UCI_Column": "std_delta_log_energy",
+      "Bengali_BenSParX_Column": "std_delta_log_energy",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    },
+    {
+      "Index": 27,
+      "Feature_Category": "Dynamic Log-Energy Kinematics",
+      "Turkish_UCI_Column": "std_delta_delta_log_energy",
+      "Bengali_BenSParX_Column": "std_delta_delta_log_energy",
+      "Extraction_Difference": "Sustained /a/ (Praat, 44.1 kHz clinical mic) vs. Spontaneous Bengali dialogue (Praat/Parselmouth, smartphone mic)"
+    }
+  ],
+  "learning_curves": {
+    "TR_to_BN": {
+      "zero_shot": {
+        "acc": 74.55555555555556,
+        "auc": 0.9035456790123456
+      },
+      "unsupervised_coral": {
+        "acc": 73.33333333333333,
+        "auc": 0.9310567901234568
+      },
+      "fractions": {
+        "5pct": {
+          "n_target_patients": 6,
+          "target_only_acc_mean": 68.27358063715542,
+          "target_only_acc_std": 1.796123303774429,
+          "target_only_auc_mean": 0.756461506157805,
+          "transfer_no_coral_acc_mean": 78.58328024750092,
+          "transfer_no_coral_acc_std": 1.790901356464222,
+          "transfer_no_coral_auc_mean": 0.8829212716539283,
+          "coral_transfer_acc_mean": 76.2218536612713,
+          "coral_transfer_acc_std": 1.0400428368760524,
+          "coral_transfer_auc_mean": 0.8909647320409825
+        },
+        "10pct": {
+          "n_target_patients": 12,
+          "target_only_acc_mean": 74.26216842634469,
+          "target_only_acc_std": 2.0236663368740384,
+          "target_only_auc_mean": 0.7963016081930386,
+          "transfer_no_coral_acc_mean": 81.15918929005186,
+          "transfer_no_coral_acc_std": 1.759427154751732,
+          "transfer_no_coral_auc_mean": 0.9094007649335719,
+          "coral_transfer_acc_mean": 80.80960696510196,
+          "coral_transfer_acc_std": 1.4644113793632627,
+          "coral_transfer_auc_mean": 0.9206542634640595
+        },
+        "15pct": {
+          "n_target_patients": 18,
+          "target_only_acc_mean": 77.31659662151294,
+          "target_only_acc_std": 2.121021842612975,
+          "target_only_auc_mean": 0.8439795992540592,
+          "transfer_no_coral_acc_mean": 82.644872840125,
+          "transfer_no_coral_acc_std": 1.8944181599619536,
+          "transfer_no_coral_auc_mean": 0.9210444375043243,
+          "coral_transfer_acc_mean": 83.43131594042552,
+          "coral_transfer_acc_std": 1.0729367031637542,
+          "coral_transfer_auc_mean": 0.9391202832746272
+        },
+        "20pct": {
+          "n_target_patients": 24,
+          "target_only_acc_mean": 78.03383570482036,
+          "target_only_acc_std": 1.485097814040981,
+          "target_only_auc_mean": 0.8559686012360258,
+          "transfer_no_coral_acc_mean": 84.42603317119908,
+          "transfer_no_coral_acc_std": 1.1884963070617711,
+          "transfer_no_coral_auc_mean": 0.9348976517409573,
+          "coral_transfer_acc_mean": 83.78768269078462,
+          "coral_transfer_acc_std": 1.59433343665814,
+          "coral_transfer_auc_mean": 0.9386083932679019
+        },
+        "30pct": {
+          "n_target_patients": 36,
+          "target_only_acc_mean": 82.53364331830613,
+          "target_only_acc_std": 1.4187377832470136,
+          "target_only_auc_mean": 0.8942863737257746,
+          "transfer_no_coral_acc_mean": 87.0453019803804,
+          "transfer_no_coral_acc_std": 1.861715213803022,
+          "transfer_no_coral_auc_mean": 0.9456150930908949,
+          "coral_transfer_acc_mean": 88.21713686607987,
+          "coral_transfer_acc_std": 1.8349996366976318,
+          "coral_transfer_auc_mean": 0.9598020218351525
+        },
+        "50pct": {
+          "n_target_patients": 60,
+          "target_only_acc_mean": 83.43246336996337,
+          "target_only_acc_std": 2.0689022383808653,
+          "target_only_auc_mean": 0.9149110002478361,
+          "transfer_no_coral_acc_mean": 89.09873321123321,
+          "transfer_no_coral_acc_std": 1.3776453216829456,
+          "transfer_no_coral_auc_mean": 0.9632079714122096,
+          "coral_transfer_acc_mean": 89.54514652014653,
+          "coral_transfer_acc_std": 1.4962533658777526,
+          "coral_transfer_auc_mean": 0.9689921212382029
+        }
+      }
+    },
+    "BN_to_TR": {
+      "zero_shot": {
+        "acc": 82.01058201058201,
+        "auc": 0.9416463504728132
+      },
+      "unsupervised_coral": {
+        "acc": 85.18518518518519,
+        "auc": 0.9425328752955082
+      },
+      "fractions": {
+        "5pct": {
+          "n_target_patients": 12,
+          "target_only_acc_mean": 73.16666666666667,
+          "target_only_acc_std": 4.2431862591252845,
+          "target_only_auc_mean": 0.6785124807929094,
+          "transfer_no_coral_acc_mean": 78.66666666666667,
+          "transfer_no_coral_acc_std": 3.9602578167726197,
+          "transfer_no_coral_auc_mean": 0.8193342898718848,
+          "coral_transfer_acc_mean": 77.38888888888889,
+          "coral_transfer_acc_std": 2.9896942326830485,
+          "coral_transfer_auc_mean": 0.845484425720711
+        },
+        "10pct": {
+          "n_target_patients": 25,
+          "target_only_acc_mean": 74.06754772393538,
+          "target_only_acc_std": 2.5461047637818797,
+          "target_only_auc_mean": 0.6537815411820717,
+          "transfer_no_coral_acc_mean": 81.61527165932452,
+          "transfer_no_coral_acc_std": 3.341312811354568,
+          "transfer_no_coral_auc_mean": 0.8560973950894375,
+          "coral_transfer_acc_mean": 81.43906020558003,
+          "coral_transfer_acc_std": 3.313056506953858,
+          "coral_transfer_auc_mean": 0.8646988143009363
+        },
+        "15pct": {
+          "n_target_patients": 38,
+          "target_only_acc_mean": 76.10591900311526,
+          "target_only_acc_std": 1.8366857287207057,
+          "target_only_auc_mean": 0.7405915637860082,
+          "transfer_no_coral_acc_mean": 83.39563862928347,
+          "transfer_no_coral_acc_std": 2.9217131682724897,
+          "transfer_no_coral_auc_mean": 0.8902314814814816,
+          "coral_transfer_acc_mean": 81.77570093457945,
+          "coral_transfer_acc_std": 3.65828133036503,
+          "coral_transfer_auc_mean": 0.8925102880658435
+        },
+        "20pct": {
+          "n_target_patients": 51,
+          "target_only_acc_mean": 77.18076285240463,
+          "target_only_acc_std": 2.219002147088258,
+          "target_only_auc_mean": 0.7649629629629631,
+          "transfer_no_coral_acc_mean": 83.28358208955225,
+          "transfer_no_coral_acc_std": 3.218101816675861,
+          "transfer_no_coral_auc_mean": 0.8997618010167031,
+          "coral_transfer_acc_mean": 82.65339966832505,
+          "coral_transfer_acc_std": 3.6898000624008915,
+          "coral_transfer_auc_mean": 0.9010137981118372
+        },
+        "30pct": {
+          "n_target_patients": 75,
+          "target_only_acc_mean": 77.51412429378533,
+          "target_only_acc_std": 0.9117678671872118,
+          "target_only_auc_mean": 0.7886083052749718,
+          "transfer_no_coral_acc_mean": 84.59510357815444,
+          "transfer_no_coral_acc_std": 3.4590136267928737,
+          "transfer_no_coral_auc_mean": 0.905267489711934,
+          "coral_transfer_acc_mean": 82.97551789077212,
+          "coral_transfer_acc_std": 3.1928541548056892,
+          "coral_transfer_auc_mean": 0.9069884025439581
+        },
+        "50pct": {
+          "n_target_patients": 126,
+          "target_only_acc_mean": 76.56084656084656,
+          "target_only_acc_std": 0.8128196558591164,
+          "target_only_auc_mean": 0.7738105791962175,
+          "transfer_no_coral_acc_mean": 84.23280423280423,
+          "transfer_no_coral_acc_std": 2.1853837490014185,
+          "transfer_no_coral_auc_mean": 0.9103945035460992,
+          "coral_transfer_acc_mean": 83.4920634920635,
+          "coral_transfer_acc_std": 2.1725359965764905,
+          "coral_transfer_auc_mean": 0.9119311465721041
+        }
+      }
+    },
+    "TR_to_OX": {
+      "zero_shot": {
+        "acc": 70.25641025641025,
+        "auc": 0.7446145124716554
+      },
+      "unsupervised_coral": {
+        "acc": 71.28205128205128,
+        "auc": 0.6438492063492064
+      },
+      "fractions": {
+        "5pct": {
+          "n_target_patients": 2,
+          "target_only_acc_mean": 55.62841530054645,
+          "target_only_acc_std": 14.942732609729047,
+          "target_only_auc_mean": 0.6319486659912192,
+          "transfer_no_coral_acc_mean": 68.63387978142077,
+          "transfer_no_coral_acc_std": 12.73399926874711,
+          "transfer_no_coral_auc_mean": 0.7997298210064168,
+          "coral_transfer_acc_mean": 72.56830601092896,
+          "coral_transfer_acc_std": 6.1668791167938295,
+          "coral_transfer_auc_mean": 0.7520094562647754
+        },
+        "10pct": {
+          "n_target_patients": 3,
+          "target_only_acc_mean": 65.48022598870057,
+          "target_only_acc_std": 18.76494425039634,
+          "target_only_auc_mean": 0.6354871146910948,
+          "transfer_no_coral_acc_mean": 70.31394453004621,
+          "transfer_no_coral_acc_std": 10.578449648368881,
+          "transfer_no_coral_auc_mean": 0.7114417331332754,
+          "coral_transfer_acc_mean": 66.81432973805855,
+          "coral_transfer_acc_std": 6.960393631255864,
+          "coral_transfer_auc_mean": 0.7098757535075944
+        },
+        "15pct": {
+          "n_target_patients": 5,
+          "target_only_acc_mean": 73.51180516824688,
+          "target_only_acc_std": 3.5213066986554047,
+          "target_only_auc_mean": 0.7643010721724691,
+          "transfer_no_coral_acc_mean": 74.11786577430749,
+          "transfer_no_coral_acc_std": 4.162403606594413,
+          "transfer_no_coral_auc_mean": 0.719494757521365,
+          "coral_transfer_acc_mean": 70.10596765197991,
+          "coral_transfer_acc_std": 3.8461317366125334,
+          "coral_transfer_auc_mean": 0.7313524858979404
+        },
+        "20pct": {
+          "n_target_patients": 7,
+          "target_only_acc_mean": 68.69497467861316,
+          "target_only_acc_std": 8.667934599992604,
+          "target_only_auc_mean": 0.6819094512572773,
+          "transfer_no_coral_acc_mean": 68.04830541488118,
+          "transfer_no_coral_acc_std": 7.846382628451746,
+          "transfer_no_coral_auc_mean": 0.7050115611709815,
+          "coral_transfer_acc_mean": 69.49660217287797,
+          "coral_transfer_acc_std": 7.890867363622184,
+          "coral_transfer_auc_mean": 0.6711482720178372
+        },
+        "30pct": {
+          "n_target_patients": 9,
+          "target_only_acc_mean": 75.11550151975685,
+          "target_only_acc_std": 5.478141397109949,
+          "target_only_auc_mean": 0.7270764652014652,
+          "transfer_no_coral_acc_mean": 75.26342451874366,
+          "transfer_no_coral_acc_std": 5.995234731583332,
+          "transfer_no_coral_auc_mean": 0.7214003357753358,
+          "coral_transfer_acc_mean": 72.83991894630194,
+          "coral_transfer_acc_std": 4.330711015599078,
+          "coral_transfer_auc_mean": 0.6934157509157509
+        },
+        "50pct": {
+          "n_target_patients": 16,
+          "target_only_acc_mean": 74.14689048065335,
+          "target_only_acc_std": 3.9593764867069283,
+          "target_only_auc_mean": 0.7466888935168045,
+          "transfer_no_coral_acc_mean": 73.33906867964305,
+          "transfer_no_coral_acc_std": 5.569545683661407,
+          "transfer_no_coral_auc_mean": 0.6837799511840608,
+          "coral_transfer_acc_mean": 71.68275034162369,
+          "coral_transfer_acc_std": 2.949851472784168,
+          "coral_transfer_auc_mean": 0.6950447707981955
+        }
+      }
+    }
+  }
+}

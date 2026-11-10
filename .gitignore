@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment & Logs
+.pt_tmp/
+catboost_info/
+lightning_logs/
+*.log
+
+# Large intermediate cached arrays (if generated during ad-hoc runs)
+*.npz
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

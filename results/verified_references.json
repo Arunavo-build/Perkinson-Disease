@@ -1,0 +1,304 @@
+[
+  {
+    "ref": "[1]",
+    "doi": "10.1016/j.asoc.2018.10.022",
+    "status": "VERIFIED_DOI",
+    "actual_title": "A comparative analysis of speech signal processing algorithms for Parkinson\u2019s disease classification and the use of the tunable Q-factor wavelet transform",
+    "journal": "Applied Soft Computing"
+  },
+  {
+    "ref": "[2]",
+    "doi": "10.1109/JBHI.2013.2245674",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Collection and Analysis of a Parkinson Speech Dataset With Multiple Types of Sound Recordings",
+    "journal": "IEEE Journal of Biomedical and Health Informatics"
+  },
+  {
+    "ref": "[3]",
+    "doi": "10.1109/TBME.2008.2005954",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Suitability of Dysphonia Measurements for Telemonitoring of Parkinson's Disease",
+    "journal": "IEEE Transactions on Biomedical Engineering"
+  },
+  {
+    "ref": "[4]",
+    "doi": "10.1186/1475-925X-6-23",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Exploiting Nonlinear Recurrence and Fractal Scaling Properties for Voice Disorder Detection",
+    "journal": "BioMedical Engineering OnLine"
+  },
+  {
+    "ref": "[5]",
+    "doi": "10.48550/arXiv.2505.12192",
+    "status": "ERR: The read operation timed out",
+    "line": "[5] R. Hossain, M. A. Kabir, A. I. G. Mowla, A. C. Roy, and R. K. Ghosh, \"BenSParX: A robust explain"
+  },
+  {
+    "ref": "[6]",
+    "doi": "NO_DOI_CONFERENCE_OR_BOOK",
+    "status": "CONF_OR_BOOK",
+    "line": "[6] J. R. Orozco-Arroyave, J. D. Arias-Londo\u00f1o, J. F. Vargas-Bonilla, M. C. Gonz\u00e1lez-R\u00e1tiva, and E. N\u00f6th, \"New Spanish speech corpus database for the analysis of people suffering from Parkinson's disease,\" in *Proc. 9th Int. Conf. Language Resources and Evaluation (LREC)*, Reykjavik, Iceland, May 2014, pp. 342\u2013347."
+  },
+  {
+    "ref": "[7]",
+    "doi": "NO_DOI_CONFERENCE_OR_BOOK",
+    "status": "CONF_OR_BOOK",
+    "line": "[7] Z. Liu, Y. Wang, S. Vaidya, F. Ruehle, J. Halverson, M. Solja\u010di\u0107, T. Y. Hou, and M. Tegmark, \"KAN: Kolmogorov-Arnold Networks,\" in *Proc. Int. Conf. Learning Representations (ICLR)*, 2025. [Online]. Available: https://arxiv.org/abs/2404.19756"
+  },
+  {
+    "ref": "[8]",
+    "doi": "NO_DOI_CONFERENCE_OR_BOOK",
+    "status": "CONF_OR_BOOK",
+    "line": "[8] G. Ke, Q. Meng, T. Finley, T. Wang, W. Chen, W. Ma, Q. Ye, and T.-Y. Liu, \"LightGBM: A highly efficient gradient boosting decision tree,\" in *Advances in Neural Information Processing Systems (NeurIPS)*, vol. 30, 2017, pp. 3146\u20133154."
+  },
+  {
+    "ref": "[9]",
+    "doi": "10.1145/2939672.2939785",
+    "status": "VERIFIED_DOI",
+    "actual_title": "XGBoost",
+    "journal": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining"
+  },
+  {
+    "ref": "[10]",
+    "doi": "NO_DOI_CONFERENCE_OR_BOOK",
+    "status": "CONF_OR_BOOK",
+    "line": "[10] L. Prokhorenkova, G. Gusev, A. Vorobev, A. V. Dorogush, and A. Gulin, \"CatBoost: Unbiased boosting with categorical features,\" in *Advances in Neural Information Processing Systems (NeurIPS)*, vol. 31, 2018, pp. 6639\u20136649."
+  },
+  {
+    "ref": "[11]",
+    "doi": "NO_DOI_CONFERENCE_OR_BOOK",
+    "status": "CONF_OR_BOOK",
+    "line": "[11] Y. Gorishniy, I. Rubachev, V. Khrulkov, and A. Babenko, \"Revisiting deep learning models for tabular data,\" in *Advances in Neural Information Processing Systems (NeurIPS)*, vol. 34, 2021, pp. 18932\u201318943."
+  },
+  {
+    "ref": "[12]",
+    "doi": "10.1609/aaai.v35i8.16826",
+    "status": "VERIFIED_DOI",
+    "actual_title": "TabNet: Attentive Interpretable Tabular Learning",
+    "journal": "Proceedings of the AAAI Conference on Artificial Intelligence"
+  },
+  {
+    "ref": "[13]",
+    "doi": "NO_DOI_CONFERENCE_OR_BOOK",
+    "status": "CONF_OR_BOOK",
+    "line": "[13] S. Popov, S. Morozov, and A. Babenko, \"Neural oblivious decision ensembles for deep learning on tabular data,\" in *Proc. Int. Conf. Learning Representations (ICLR)*, 2020."
+  },
+  {
+    "ref": "[14]",
+    "doi": "10.48550/arXiv.2106.01342",
+    "status": "ERR: The read operation timed out",
+    "line": "[14] G. Somepalli, A. Schwarzschild, M. Goldblum, C. B. Bruss, and T. Goldstein, \"SAINT: Improved ne"
+  },
+  {
+    "ref": "[15]",
+    "doi": "10.48550/arXiv.2207.08548",
+    "status": "ERR: The read operation timed out",
+    "line": "[15] M. Joseph and H. Raj, \"GANDALF: Gated adaptive network for deep automated learning of features "
+  },
+  {
+    "ref": "[16]",
+    "doi": "NO_DOI_CONFERENCE_OR_BOOK",
+    "status": "CONF_OR_BOOK",
+    "line": "[16] L. Grinsztajn, E. Oyallon, and G. Varoquaux, \"Why do tree-based models still outperform deep learning on typical tabular data?\" in *Advances in Neural Information Processing Systems (NeurIPS)*, vol. 35, 2022, pp. 507\u2013520."
+  },
+  {
+    "ref": "[17]",
+    "doi": "NO_DOI_CONFERENCE_OR_BOOK",
+    "status": "CONF_OR_BOOK",
+    "line": "[17] S. M. Lundberg and S.-I. Lee, \"A unified approach to interpreting model predictions,\" in *Advances in Neural Information Processing Systems (NeurIPS)*, vol. 30, 2017, pp. 4765\u20134774."
+  },
+  {
+    "ref": "[18]",
+    "doi": "10.1038/s42256-019-0138-9",
+    "status": "VERIFIED_DOI",
+    "actual_title": "From local explanations to global understanding with explainable AI for trees",
+    "journal": "Nature Machine Intelligence"
+  },
+  {
+    "ref": "[19]",
+    "doi": "10.1609/aaai.v30i1.10306",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Return of Frustratingly Easy Domain Adaptation",
+    "journal": "Proceedings of the AAAI Conference on Artificial Intelligence"
+  },
+  {
+    "ref": "[20]",
+    "doi": "10.1109/ACCESS.2019.2936564",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Deep Learning-Based Parkinson\u2019s Disease Classification Using Vocal Feature Sets",
+    "journal": "IEEE Access"
+  },
+  {
+    "ref": "[21]",
+    "doi": "10.1016/j.bspc.2021.102452",
+    "status": "VERIFIED_DOI",
+    "actual_title": "An efficient dimensionality reduction method using filter-based feature selection and variational autoencoders on Parkinson's disease classification",
+    "journal": "Biomedical Signal Processing and Control"
+  },
+  {
+    "ref": "[22]",
+    "doi": "10.1016/j.bspc.2021.102415",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Analysis of voice as an assisting tool for detection of Parkinson's disease and its subsequent clinical interpretation",
+    "journal": "Biomedical Signal Processing and Control"
+  },
+  {
+    "ref": "[23]",
+    "doi": "10.1016/j.eswa.2021.115013",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Robust automated Parkinson disease detection based on voice signals with transfer learning",
+    "journal": "Expert Systems with Applications"
+  },
+  {
+    "ref": "[24]",
+    "doi": "10.1016/j.eswa.2021.115283",
+    "status": "VERIFIED_DOI",
+    "actual_title": "A Hybrid Approach for Parkinson\u2019s Disease diagnosis with Resonance and Time-Frequency based features from Speech signals",
+    "journal": "Expert Systems with Applications"
+  },
+  {
+    "ref": "[25]",
+    "doi": "10.1109/EBBT.2019.8741725",
+    "status": "VERIFIED_DOI",
+    "actual_title": "A Hybrid Approach to Parkinson Disease Classification Using Speech Signal: The Combination of SMOTE and Random Forests",
+    "journal": "2019 Scientific Meeting on Electrical-Electronics &amp; Biomedical Engineering and Computer Science (EBBT)"
+  },
+  {
+    "ref": "[26]",
+    "doi": "10.1016/j.mehy.2020.109603",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Early diagnosis of Parkinson\u2019s disease using machine learning algorithms",
+    "journal": "Medical Hypotheses"
+  },
+  {
+    "ref": "[27]",
+    "doi": "10.1007/s10772-021-09837-9",
+    "status": "VERIFIED_DOI",
+    "actual_title": "A hybrid system for Parkinson\u2019s disease diagnosis using machine learning techniques",
+    "journal": "International Journal of Speech Technology"
+  },
+  {
+    "ref": "[28]",
+    "doi": "10.4108/eai.13-7-2018.162806",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Voice-Based Detection of Parkinson\u2019s Disease through Ensemble Machine Learning Approach: A Performance Study",
+    "journal": "EAI Endorsed Transactions on Pervasive Health and Technology"
+  },
+  {
+    "ref": "[29]",
+    "doi": "10.1109/JTEHM.2019.2940900",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Automated Detection of Parkinson\u2019s Disease Based on Multiple Types of Sustained Phonations Using Linear Discriminant Analysis and Genetically Optimized Neural Network",
+    "journal": "IEEE Journal of Translational Engineering in Health and Medicine"
+  },
+  {
+    "ref": "[30]",
+    "doi": "10.1016/j.bspc.2020.102165",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Local discriminant preservation projection embedded ensemble learning based dimensionality reduction of speech data of Parkinson\u2019s disease",
+    "journal": "Biomedical Signal Processing and Control"
+  },
+  {
+    "ref": "[31]",
+    "doi": "10.1016/j.eswa.2018.06.003",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Feature-driven machine learning to improve early diagnosis of Parkinson's disease",
+    "journal": "Expert Systems with Applications"
+  },
+  {
+    "ref": "[32]",
+    "doi": "10.1016/j.compbiomed.2021.105021",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Convolutional neural network ensemble for Parkinson's disease detection from voice recordings",
+    "journal": "Computers in Biology and Medicine"
+  },
+  {
+    "ref": "[33]",
+    "doi": "10.4258/hir.2021.27.3.189",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Impact of the Choice of Cross-Validation Techniques on the Results of Machine Learning-Based Diagnostic Applications",
+    "journal": "Healthcare Informatics Research"
+  },
+  {
+    "ref": "[34]",
+    "doi": "10.1038/s41746-019-0178-x",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Detecting the impact of subject characteristics on machine learning-based diagnostic applications",
+    "journal": "npj Digital Medicine"
+  },
+  {
+    "ref": "[35]",
+    "doi": "10.1093/gigascience/gix019",
+    "status": "VERIFIED_DOI",
+    "actual_title": "The need to approximate the use-case in clinical machine learning",
+    "journal": "GigaScience"
+  },
+  {
+    "ref": "[36]",
+    "doi": "10.1016/j.bspc.2021.102418",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Advances in Parkinson's Disease detection and assessment using voice and speech: A review of the articulatory and phonatory aspects",
+    "journal": "Biomedical Signal Processing and Control"
+  },
+  {
+    "ref": "[37]",
+    "doi": "10.1038/s41598-019-55271-y",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Phonetic relevance and phonemic grouping of speech in the automatic detection of Parkinson\u2019s Disease",
+    "journal": "Scientific Reports"
+  },
+  {
+    "ref": "[38]",
+    "doi": "10.1016/j.compbiomed.2023.107559",
+    "status": "DOI_FAILED: The read operation timed out",
+    "line": "[38] A. Favaro, Y.-T. Tsai, A. Butala, T. Thebaud, J. Villalba, N. Dehak, and L. Moro-Vel\u00e1zquez, \"Interpretable speech features vs. DNN embeddings: What to use in the automatic assessment of Parkinson's disease in multi-lingual scenarios,\" *Computers in Biology and Medicine*, vol. 166, Art. no. 107559, Nov. 2023, doi: 10.1016/j.compbiomed.2023.107559."
+  },
+  {
+    "ref": "[39]",
+    "doi": "10.3389/fneur.2023.1142642",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Multilingual evaluation of interpretable biomarkers to represent language and speech patterns in Parkinson's disease",
+    "journal": "Frontiers in Neurology"
+  },
+  {
+    "ref": "[40]",
+    "doi": "10.1038/nrdp.2017.13",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Parkinson disease",
+    "journal": "Nature Reviews Disease Primers"
+  },
+  {
+    "ref": "[41]",
+    "doi": "NO_DOI_CONFERENCE_OR_BOOK",
+    "status": "CONF_OR_BOOK",
+    "line": "[41] J. R. Duffy, *Motor Speech Disorders: Substrates, Differential Diagnosis, and Management*, 4th ed. St. Louis, MO, USA: Elsevier, 2019."
+  },
+  {
+    "ref": "[42]",
+    "doi": "10.1155/1999/327643",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Speech Impairment in a Large Sample of Patients with Parkinson\u2019s Disease",
+    "journal": "Behavioural Neurology"
+  },
+  {
+    "ref": "[43]",
+    "doi": "10.1109/TNSRE.2018.2851787",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Smartphone Allows Capture of Speech Abnormalities Associated With High Risk of Developing Parkinson\u2019s Disease",
+    "journal": "IEEE Transactions on Neural Systems and Rehabilitation Engineering"
+  },
+  {
+    "ref": "[44]",
+    "doi": "10.1038/s41598-017-00047-5",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Automated analysis of connected speech reveals early biomarkers of Parkinson\u2019s disease in patients with rapid eye movement sleep behaviour disorder",
+    "journal": "Scientific Reports"
+  },
+  {
+    "ref": "[45]",
+    "doi": "10.1136/jnnp.71.4.493",
+    "status": "VERIFIED_DOI",
+    "actual_title": "Intensive voice treatment (LSVT(R)) for patients with Parkinson's disease: a 2 year follow up",
+    "journal": "Journal of Neurology, Neurosurgery &amp; Psychiatry"
+  }
+]

@@ -1,0 +1,6 @@
+Feature,Type,Clinical Manifestation,Spline Dynamic
+mean_MFCC_2nd_coef,Cepstral Formant,Phonatory tract stiffness and articulatory undershoot in PD.,Monotonically increasing PD risk beyond +0.5 std.
+std_delta_delta_log_energy,Micro-Tremor / Dynamics,Involuntary vocal fold micro-tremor and subglottic pressure fluctuations.,Sharp nonlinear rise in risk indicating subharmonic dysphonia.
+std_8th_delta_delta,Spectral Acceleration,Loss of vocal fold velocity control caused by hypokinesia.,Sigmoidal saturation pattern.
+MDVP:Jitter(%),Pitch Perturbation,Inability to maintain steady vocal cord cycle frequency.,Super-linear risk curvature above clinical threshold of 1.04%.
+MDVP:Shimmer,Amplitude Perturbation,Incomplete vocal fold adduction and breathiness / hypophonia.,Upward concave trajectory confirming acoustic aerodynamic decay.

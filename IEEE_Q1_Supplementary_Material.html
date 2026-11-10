@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Supplementary Material: Patient-Grouped Parkinson's Disease Screening Across Languages</title>
+<style>
+  @page {
+    size: letter portrait;
+    margin: 0.48in 0.48in 0.48in 0.48in;
+  }
+  body {
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-size: 9.0pt;
+    line-height: 1.26;
+    color: #000;
+    margin: 0;
+  }
+  code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 8.1pt;
+  }
+  .header {
+    font-size: 7.4pt;
+    text-transform: uppercase;
+    border-bottom: 0.8pt solid #000;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  h1 {
+    font-size: 14.2pt;
+    text-align: center;
+    margin: 0 0 5px 0;
+  }
+  .sub {
+    text-align: center;
+    font-size: 9.2pt;
+    margin-bottom: 12px;
+    color: #222;
+  }
+  h2 {
+    font-size: 10.2pt;
+    font-variant: small-caps;
+    border-bottom: 0.4pt solid #666;
+    padding-bottom: 2px;
+    margin: 10px 0 5px 0;
+  }
+  p {
+    margin: 0 0 5px 0;
+    text-align: justify;
+  }
+  .eq {
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 12px;
+    font-size: 8.8pt;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 7.5pt;
+    margin: 6px 0 10px 0;
+    border-top: 1.1pt solid #000;
+    border-bottom: 1.1pt solid #000;
+  }
+  th {
+    border-bottom: 0.6pt solid #000;
+    padding: 2.5px 4px;
+    text-align: center;
+    font-weight: bold;
+  }
+  td {
+    padding: 2px 4px;
+    text-align: center;
+    border-bottom: 0.25pt solid #ddd;
+  }
+  td.l, th.l {
+    text-align: left;
+  }
+  .fig {
+    text-align: center;
+    margin: 8px 0;
+    break-inside: avoid;
+  }
+  .fig img {
+    max-width: 95%;
+    height: auto;
+  }
+  .cap {
+    font-size: 8.0pt;
+    text-align: justify;
+    margin-top: 3px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <span>SUPPLEMENTARY MATERIAL &mdash; IEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS</span>
+  <span>ARUNAVO: PATIENT-GROUPED PD SPEECH SCREENING</span>
+</div>
+
+<h1>Supplementary Material: Patient-Grouped Parkinson's Disease Screening Across Languages via LightGBM and Kolmogorov&ndash;Arnold Spline Ensembles</h1>
+<div class="sub">Arunavo &bull; Companion Document to Main Manuscript &bull; Repository: https://github.com/Arunavo-build/Perkinson-Disease</div>
+
+<h2>Section S1. Standard Acoustic Signal Processing and B-Spline Equations</h2>
+<p>This section provides the standard mathematical definitions for the acoustic feature families and B-spline basis functions referenced in Section III of the main text.</p>
+<p><b>1) Fundamental Frequency Perturbation (Local and RAP Jitter):</b> Given <i>K</i> consecutive glottal pitch periods <i>T</i><sub>1</sub>, <i>T</i><sub>2</sub>, &hellip;, <i>T<sub>K</sub></i> extracted via autocorrelation peak picking, cycle-to-cycle local percentage jitter and three-point relative average perturbation (RAP) are defined as:</p>
+<div class="eq">
+  <span>Jitter<sub>loc(%)</sub> = [ (1 / (<i>K</i> &minus; 1)) &Sigma;<sub><i>i</i>=1</sub><sup><i>K</i>&minus;1</sup> |<i>T<sub>i</sub></i> &minus; <i>T</i><sub><i>i</i>+1</sub>| ] / [ (1 / <i>K</i>) &Sigma;<sub><i>i</i>=1</sub><sup><i>K</i></sup> <i>T<sub>i</sub></i> ] &times; 100, &emsp; RAP = [ (1 / (<i>K</i> &minus; 2)) &Sigma;<sub><i>i</i>=2</sub><sup><i>K</i>&minus;1</sup> |<i>T<sub>i</sub></i> &minus; (<i>T</i><sub><i>i</i>&minus;1</sub> + <i>T<sub>i</sub></i> + <i>T</i><sub><i>i</i>+1</sub>)/3| ] / [ (1 / <i>K</i>) &Sigma;<sub><i>i</i>=1</sub><sup><i>K</i></sup> <i>T<sub>i</sub></i> ].</span>
+  <span>(S1)</span>
+</div>
+
+<p><b>2) Amplitude Perturbation (Local and APQ Shimmer):</b> Given peak-to-peak glottal cycle amplitudes <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, &hellip;, <i>A<sub>K</sub></i>, local shimmer in decibels (dB) and the <i>q</i>-point amplitude perturbation quotient (APQ<sub><i>q</i></sub>, <i>q</i> &isin; {3, 5, 11}) are:</p>
+<div class="eq">
+  <span>Shimmer<sub>dB</sub> = (1 / (<i>K</i> &minus; 1)) &Sigma;<sub><i>i</i>=1</sub><sup><i>K</i>&minus;1</sup> |20 log<sub>10</sub>(<i>A</i><sub><i>i</i>+1</sub> / <i>A<sub>i</sub></i>)|, &emsp; APQ<sub><i>q</i></sub> = [ (1 / (<i>K</i> &minus; <i>q</i> + 1)) &Sigma;<sub><i>i</i>=1</sub><sup><i>K</i>&minus;<i>q</i>+1</sup> |<i>A<sub>i</sub></i> &minus; (1/<i>q</i>)&Sigma;<sub><i>m</i>=0</sub><sup><i>q</i>&minus;1</sup> <i>A</i><sub><i>i</i>+<i>m</i></sub>| ] / [ (1 / <i>K</i>) &Sigma;<sub><i>i</i>=1</sub><sup><i>K</i></sup> <i>A<sub>i</sub></i> ].</span>
+  <span>(S2)</span>
+</div>
+
+<p><b>3) Harmonics-to-Noise Ratio (HNR) and Pitch Period Entropy (PPE):</b> For an acoustic frame <i>s</i>(<i>t</i>) with fundamental period <i>T</i><sub>0</sub>, HNR quantifies harmonic periodicity relative to turbulent glottal noise, while PPE measures the Shannon entropy of the pitch-period residual distribution <i>p<sub>r</sub></i> on a semitone scale:</p>
+<div class="eq">
+  <span>HNR (dB) = 10 log<sub>10</sub> [ <i>R</i>(<i>T</i><sub>0</sub>) / (<i>R</i>(0) &minus; <i>R</i>(<i>T</i><sub>0</sub>)) ], &emsp; PPE = &minus;&Sigma;<sub><i>r</i></sub> <i>p<sub>r</sub></i> log<sub>2</sub>(<i>p<sub>r</sub></i>).</span>
+  <span>(S3)</span>
+</div>
+
+<p><b>4) Mel-Frequency Cepstral Coefficients (MFCCs) and Dynamic Velocity/Acceleration:</b> Using a <i>B</i>-channel triangular Mel filterbank <i>H<sub>b</sub></i>(<i>k</i>) applied to the short-time Fourier power spectrum |<i>S</i>(<i>k</i>)|<sup>2</sup>, static cepstral coefficients <i>c<sub>n</sub></i> and their first-order (&Delta;<i>c<sub>n</sub></i>, velocity) and second-order (&Delta;<sup>2</sup><i>c<sub>n</sub></i>, acceleration) temporal derivatives over window <i>W</i> = 2 are computed as:</p>
+<div class="eq">
+  <span><i>c<sub>n</sub></i> = &Sigma;<sub><i>b</i>=1</sub><sup><i>B</i></sup> log(&Sigma;<sub><i>k</i></sub> |<i>S</i>(<i>k</i>)|<sup>2</sup> <i>H<sub>b</sub></i>(<i>k</i>)) cos[&pi;<i>n</i>(<i>b</i> &minus; 0.5)/<i>B</i>], &emsp; &Delta;<i>c<sub>n</sub></i><sup>(<i>t</i>)</sup> = [ &Sigma;<sub><i>&tau;</i>=1</sub><sup><i>W</i></sup> <i>&tau;</i>(<i>c<sub>n</sub></i><sup>(<i>t</i>+<i>&tau;</i>)</sup> &minus; <i>c<sub>n</sub></i><sup>(<i>t</i>&minus;<i>&tau;</i>)</sup>) ] / [ 2 &Sigma;<sub><i>&tau;</i>=1</sub><sup><i>W</i></sup> <i>&tau;</i><sup>2</sup> ].</span>
+  <span>(S4)</span>
+</div>
+
+<p><b>5) Tunable Q-Factor Wavelet Transform (TQWT):</b> TQWT decomposes the voice signal into <i>J</i> = 36 sub-bands parameterized by quality factor <i>Q</i>, redundancy <i>r</i>, and low/high-pass scaling factors <i>&alpha;</i> = 1 &minus; 2/[(<i>Q</i> + 1)<i>r</i>], <i>&beta;</i> = 2/(<i>Q</i> + 1). The sub-band log-energy entropy of level <i>j</i> with wavelet coefficients <i>w<sub>j,n</sub></i> is:</p>
+<div class="eq">
+  <span><i>E</i><sub>log, <i>j</i></sub> = &Sigma;<sub><i>n</i>=1</sub><sup><i>N<sub>j</sub></i></sup> log(<i>w<sub>j,n</sub></i><sup>2</sup> + <i>&epsilon;</i>), &emsp; TKEO(<i>w<sub>j,n</sub></i>) = <i>w<sub>j,n</sub></i><sup>2</sup> &minus; <i>w</i><sub><i>j,n</i>&minus;1</sub> <i>w</i><sub><i>j,n</i>+1</sub>.</span>
+  <span>(S5)</span>
+</div>
+
+<p><b>6) Cox&ndash;de Boor Cubic B-Spline Recursion in KAN:</b> On a uniform knot sequence {<i>t</i><sub>0</sub>, <i>t</i><sub>1</sub>, &hellip;, <i>t</i><sub><i>G</i>+2<i>k</i></sub>} over [&minus;2.5, 2.5], the degree-<i>k</i> (<i>k</i> = 3) B-spline basis functions <i>B<sub>m,k</sub></i>(<i>z</i>) used in Eq. (2) of the main manuscript are evaluated recursively from piecewise-constant indicators:</p>
+<div class="eq">
+  <span><i>B</i><sub><i>m</i>,0</sub>(<i>z</i>) = I(<i>t<sub>m</sub></i> &le; <i>z</i> &lt; <i>t</i><sub><i>m</i>+1</sub>), &emsp; <i>B<sub>m,k</sub></i>(<i>z</i>) = [(<i>z</i> &minus; <i>t<sub>m</sub></i>)/(<i>t</i><sub><i>m</i>+<i>k</i></sub> &minus; <i>t<sub>m</sub></i>)] <i>B</i><sub><i>m,k</i>&minus;1</sub>(<i>z</i>) + [(<i>t</i><sub><i>m</i>+<i>k</i>+1</sub> &minus; <i>z</i>)/(<i>t</i><sub><i>m</i>+<i>k</i>+1</sub> &minus; <i>t</i><sub><i>m</i>+1</sub>)] <i>B</i><sub><i>m</i>+1,<i>k</i>&minus;1</sub>(<i>z</i>).</span>
+  <span>(S6)</span>
+</div>
+
+<h2>Section S2. Hyperparameter Tuning &amp; Architecture Specifications for All 13 Models</h2>
+<p>Table S1 details the exact architectural configurations, hyperparameter search spaces, and training settings for all 13 models compared in Section IV-B and Fig. 3 of the main manuscript. All models were evaluated on the identical five-fold <code>GroupKFold</code> patient splits.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th class="l">Model Family</th>
+      <th class="l">Architecture / Classifier</th>
+      <th class="l">Key Hyperparameters &amp; Regularization</th>
+      <th class="l">Optimizer &amp; Stopping Criteria</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="l">Gradient Boosted Trees</td>
+      <td class="l"><b>LightGBM</b> (<i>&eta;</i> = 0.05 &amp; <i>&eta;</i> = 0.10)</td>
+      <td class="l"><code>n_estimators=100</code>, <code>num_leaves=31</code>, <code>max_depth=-1</code>, <code>subsample=0.85</code>, <code>colsample_bytree=0.85</code></td>
+      <td class="l">Exact leaf-wise greedy split; cross-entropy objective</td>
+    </tr>
+    <tr>
+      <td class="l">Gradient Boosted Trees</td>
+      <td class="l"><b>XGBoost</b></td>
+      <td class="l"><code>n_estimators=100</code>, <code>max_depth=6</code>, <code>learning_rate=0.10</code>, <code>subsample=0.85</code>, <code>colsample_bytree=0.85</code></td>
+      <td class="l">Histogram depth-wise tree boosting; log-loss objective</td>
+    </tr>
+    <tr>
+      <td class="l">Gradient Boosted Trees</td>
+      <td class="l"><b>CatBoost</b></td>
+      <td class="l"><code>iterations=100</code>, <code>depth=6</code>, <code>learning_rate=0.08</code>, <code>l2_leaf_reg=3.0</code> (oblivious trees)</td>
+      <td class="l">Symmetric tree splitting; binary log-loss</td>
+    </tr>
+    <tr>
+      <td class="l">Spline Network</td>
+      <td class="l"><b>KAN</b> (Cubic B-Spline)</td>
+      <td class="l"><code>width=[D_in, 8, 2]</code>, spline order <code>k=3</code>, grid intervals <code>G=5</code>, SiLU residual base, <i>&lambda;</i><sub>L1</sub> = 10<sup>&minus;4</sup></td>
+      <td class="l">Adam (lr = 0.01, weight decay 10<sup>&minus;3</sup>), 60 epochs</td>
+    </tr>
+    <tr>
+      <td class="l">Classical Non-Linear</td>
+      <td class="l"><b>MLP</b> (2-Layer Perceptron)</td>
+      <td class="l"><code>hidden_layer_sizes=(64, 32)</code>, ReLU activation, <i>L</i><sub>2</sub> penalty <i>&alpha;</i> = 10<sup>&minus;4</sup>, batch size 64</td>
+      <td class="l">Adam (lr = 0.001), max 150 epochs</td>
+    </tr>
+    <tr>
+      <td class="l">Kernel Classifier</td>
+      <td class="l"><b>SVM</b> (RBF Kernel)</td>
+      <td class="l">Radial Basis Function kernel, regularization <i>C</i> = 1.0, kernel scale <i>&gamma;</i> = 1/(<i>D</i><sub>in</sub><i>&sigma;<sub>X</sub></i><sup>2</sup>)</td>
+      <td class="l">SMO solver + 5-fold internal Platt scaling for probabilities</td>
+    </tr>
+    <tr>
+      <td class="l">Deep Tabular Attention</td>
+      <td class="l"><b>FT-Transformer</b></td>
+      <td class="l">Feature Tokenizer + <code>num_attn_blocks=2</code>, <code>num_heads=2</code>, <code>input_embed_dim=32</code>, dropout 0.1</td>
+      <td class="l">AdamW (lr = 10<sup>&minus;3</sup>), batch size 128, early stopping (patience 3)</td>
+    </tr>
+    <tr>
+      <td class="l">Deep Tabular Attention</td>
+      <td class="l"><b>SAINT</b> (Row + Col Attention)</td>
+      <td class="l">Intersample + intrasample self-attention, <code>num_attn_blocks=2</code>, <code>num_heads=2</code>, dropout 0.1</td>
+      <td class="l">AdamW (lr = 10<sup>&minus;3</sup>), batch size 128, early stopping (patience 3)</td>
+    </tr>
+    <tr>
+      <td class="l">Deep Tabular Attention</td>
+      <td class="l"><b>TabTransformer</b></td>
+      <td class="l">Contextual transformer blocks (<code>num_attn_blocks=2</code>, <code>num_heads=2</code>) + MLP head <code>[64, 32]</code></td>
+      <td class="l">AdamW (lr = 10<sup>&minus;3</sup>), batch size 128, early stopping (patience 3)</td>
+    </tr>
+    <tr>
+      <td class="l">Sparse Attention</td>
+      <td class="l"><b>TabNet</b></td>
+      <td class="l">Sequential Sparsemax feature masks, <code>n_d=8</code>, <code>n_a=8</code>, <code>n_steps=3</code>, <i>&gamma;</i> = 1.3, <i>&lambda;</i><sub>sparse</sub> = 10<sup>&minus;3</sup></td>
+      <td class="l">Adam (lr = 0.02), batch size 128, early stopping (patience 3)</td>
+    </tr>
+    <tr>
+      <td class="l">Differentiable Trees</td>
+      <td class="l"><b>NODE</b> &amp; <b>GATE</b></td>
+      <td class="l">NODE: <code>num_layers=1</code>, <code>num_trees=64</code>, <code>depth=4</code>; GATE: <code>gflu_stages=2</code>, <code>num_trees=10</code>, <code>tree_depth=4</code></td>
+      <td class="l">AdamW (lr = 10<sup>&minus;3</sup>), entmax split relaxation</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Section S3. Cross-Corpus 27-Feature and 13-Feature Homologous Acoustic Mapping</h2>
+<p>Table S2 lists all 27 homologous acoustic biomarkers aligned between the 753-feature Turkish UCI sustained vowel corpus (<code>TR</code>) and the 71-feature Bengali BenSParX conversational corpus (<code>BN</code>), along with physical differences in signal acquisition and normalization. For the 22-feature English Oxford corpus (<code>OX</code>), the 13 shared dysphonia features mapped to TR are: <code>MDVP:Jitter(%)</code> &harr; <code>locPctJitter</code>, <code>MDVP:Jitter(Abs)</code> &harr; <code>locAbsJitter</code>, <code>MDVP:RAP</code> &harr; <code>rapJitter</code>, <code>MDVP:PPQ</code> &harr; <code>ppq5Jitter</code>, <code>Jitter:DDP</code> &harr; <code>ddpJitter</code>, <code>MDVP:Shimmer</code> &harr; <code>locShimmer</code>, <code>MDVP:Shimmer(dB)</code> &harr; <code>locDbShimmer</code>, <code>Shimmer:APQ3</code> &harr; <code>apq3Shimmer</code>, <code>Shimmer:APQ5</code> &harr; <code>apq5Shimmer</code>, <code>MDVP:APQ</code> &harr; <code>apq11Shimmer</code>, <code>Shimmer:DDA</code> &harr; <code>ddaShimmer</code>, <code>NHR</code> &harr; <code>meanNoiseToHarmHarmonicity</code>, and <code>HNR</code> &harr; <code>meanHarmToNoiseHarmonicity</code>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th class="l">Acoustic Feature Family</th>
+      <th class="l">Turkish UCI Column (TR)</th>
+      <th class="l">Bengali BenSParX Column (BN)</th>
+      <th class="l">Physical Task &amp; Extraction Protocol Difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td class='l'>Glottal Pulse Periodicity</td><td class='l'><code>numPulses</code></td><td class='l'><code>numPulses</code></td><td class='l'>Stationary /a/ glottal cycles (75-500 Hz pitch floor/ceiling) vs. voiced-segment pulse gating across conversational prosody</td></tr>
+<tr><td>2</td><td class='l'>Glottal Pulse Periodicity</td><td class='l'><code>numPeriodsPulses</code></td><td class='l'><code>numPeriodsPulses</code></td><td class='l'>Stationary /a/ glottal cycles (75-500 Hz pitch floor/ceiling) vs. voiced-segment pulse gating across conversational prosody</td></tr>
+<tr><td>3</td><td class='l'>Glottal Pulse Periodicity</td><td class='l'><code>meanPeriodPulses</code></td><td class='l'><code>meanPeriodPulses</code></td><td class='l'>Stationary /a/ glottal cycles (75-500 Hz pitch floor/ceiling) vs. voiced-segment pulse gating across conversational prosody</td></tr>
+<tr><td>4</td><td class='l'>Glottal Pulse Periodicity</td><td class='l'><code>stdDevPeriodPulses</code></td><td class='l'><code>stdDevPeriodPulses</code></td><td class='l'>Stationary /a/ glottal cycles (75-500 Hz pitch floor/ceiling) vs. voiced-segment pulse gating across conversational prosody</td></tr>
+<tr><td>5</td><td class='l'>Fundamental Frequency Perturbation (Jitter)</td><td class='l'><code>locPctJitter</code></td><td class='l'><code>locPctJitter</code></td><td class='l'>Cycle-to-cycle pitch perturbation on stationary vowel vs. voiced-frame autocorrelation peak picking in running speech</td></tr>
+<tr><td>6</td><td class='l'>Fundamental Frequency Perturbation (Jitter)</td><td class='l'><code>locAbsJitter</code></td><td class='l'><code>locAbsJitter</code></td><td class='l'>Cycle-to-cycle pitch perturbation on stationary vowel vs. voiced-frame autocorrelation peak picking in running speech</td></tr>
+<tr><td>7</td><td class='l'>Fundamental Frequency Perturbation (Jitter)</td><td class='l'><code>rapJitter</code></td><td class='l'><code>rapJitter</code></td><td class='l'>Cycle-to-cycle pitch perturbation on stationary vowel vs. voiced-frame autocorrelation peak picking in running speech</td></tr>
+<tr><td>8</td><td class='l'>Fundamental Frequency Perturbation (Jitter)</td><td class='l'><code>ppq5Jitter</code></td><td class='l'><code>ppq5Jitter</code></td><td class='l'>Cycle-to-cycle pitch perturbation on stationary vowel vs. voiced-frame autocorrelation peak picking in running speech</td></tr>
+<tr><td>9</td><td class='l'>Fundamental Frequency Perturbation (Jitter)</td><td class='l'><code>ddpJitter</code></td><td class='l'><code>ddpJitter</code></td><td class='l'>Cycle-to-cycle pitch perturbation on stationary vowel vs. voiced-frame autocorrelation peak picking in running speech</td></tr>
+<tr><td>10</td><td class='l'>Amplitude Perturbation (Shimmer)</td><td class='l'><code>locShimmer</code></td><td class='l'><code>locShimmer</code></td><td class='l'>Peak-to-peak glottal amplitude stability (clinical condenser mic) vs. conversational syllable envelope (smartphone mic)</td></tr>
+<tr><td>11</td><td class='l'>Amplitude Perturbation (Shimmer)</td><td class='l'><code>locDbShimmer</code></td><td class='l'><code>locDbShimmer</code></td><td class='l'>Peak-to-peak glottal amplitude stability (clinical condenser mic) vs. conversational syllable envelope (smartphone mic)</td></tr>
+<tr><td>12</td><td class='l'>Amplitude Perturbation (Shimmer)</td><td class='l'><code>apq3Shimmer</code></td><td class='l'><code>apq3Shimmer</code></td><td class='l'>Peak-to-peak glottal amplitude stability (clinical condenser mic) vs. conversational syllable envelope (smartphone mic)</td></tr>
+<tr><td>13</td><td class='l'>Amplitude Perturbation (Shimmer)</td><td class='l'><code>apq5Shimmer</code></td><td class='l'><code>apq5Shimmer</code></td><td class='l'>Peak-to-peak glottal amplitude stability (clinical condenser mic) vs. conversational syllable envelope (smartphone mic)</td></tr>
+<tr><td>14</td><td class='l'>Amplitude Perturbation (Shimmer)</td><td class='l'><code>apq11Shimmer</code></td><td class='l'><code>apq11Shimmer</code></td><td class='l'>Peak-to-peak glottal amplitude stability (clinical condenser mic) vs. conversational syllable envelope (smartphone mic)</td></tr>
+<tr><td>15</td><td class='l'>Amplitude Perturbation (Shimmer)</td><td class='l'><code>ddaShimmer</code></td><td class='l'><code>ddaShimmer</code></td><td class='l'>Peak-to-peak glottal amplitude stability (clinical condenser mic) vs. conversational syllable envelope (smartphone mic)</td></tr>
+<tr><td>16</td><td class='l'>Glottal Harmonic-to-Noise Ratio</td><td class='l'><code>meanAutoCorrHarmonicity</code></td><td class='l'><code>meanAutoCorrHarmonicity</code></td><td class='l'>Harmonic periodicity over turbulent aspiration noise in sustained /a/ vs. voiced conversational frames</td></tr>
+<tr><td>17</td><td class='l'>Vocal Pitch & Subglottal Intensity</td><td class='l'><code>minIntensity</code></td><td class='l'><code>minIntensity</code></td><td class='l'>Uncalibrated SPL dB range during steady phonation vs. utterance-level conversational intensity contour</td></tr>
+<tr><td>18</td><td class='l'>Vocal Pitch & Subglottal Intensity</td><td class='l'><code>maxIntensity</code></td><td class='l'><code>maxIntensity</code></td><td class='l'>Uncalibrated SPL dB range during steady phonation vs. utterance-level conversational intensity contour</td></tr>
+<tr><td>19</td><td class='l'>Vocal Pitch & Subglottal Intensity</td><td class='l'><code>meanIntensity</code></td><td class='l'><code>meanIntensity</code></td><td class='l'>Uncalibrated SPL dB range during steady phonation vs. utterance-level conversational intensity contour</td></tr>
+<tr><td>20</td><td class='l'>Vocal Tract Formant Frequencies & Bandwidths</td><td class='l'><code>f1</code></td><td class='l'><code>f1</code></td><td class='l'>Burg LPC formant frequencies (F1-F4) on static open-mid vowel /a/ vs. coarticulated vowel transitions in Bengali</td></tr>
+<tr><td>21</td><td class='l'>Vocal Tract Formant Frequencies & Bandwidths</td><td class='l'><code>f2</code></td><td class='l'><code>f2</code></td><td class='l'>Burg LPC formant frequencies (F1-F4) on static open-mid vowel /a/ vs. coarticulated vowel transitions in Bengali</td></tr>
+<tr><td>22</td><td class='l'>Vocal Tract Formant Frequencies & Bandwidths</td><td class='l'><code>f3</code></td><td class='l'><code>f3</code></td><td class='l'>Burg LPC formant frequencies (F1-F4) on static open-mid vowel /a/ vs. coarticulated vowel transitions in Bengali</td></tr>
+<tr><td>23</td><td class='l'>Vocal Tract Formant Frequencies & Bandwidths</td><td class='l'><code>f4</code></td><td class='l'><code>f4</code></td><td class='l'>Burg LPC formant frequencies (F1-F4) on static open-mid vowel /a/ vs. coarticulated vowel transitions in Bengali</td></tr>
+<tr><td>24</td><td class='l'>Dynamic Log-Energy Kinematics</td><td class='l'><code>mean_Log_energy</code></td><td class='l'><code>mean_Log_energy</code></td><td class='l'>Frame-level log-energy and 1st/2nd temporal derivatives (25 ms Hamming window, 10 ms hop; within-fold z-score normalized)</td></tr>
+<tr><td>25</td><td class='l'>Dynamic Log-Energy Kinematics</td><td class='l'><code>std_Log_energy</code></td><td class='l'><code>std_Log_energy</code></td><td class='l'>Frame-level log-energy and 1st/2nd temporal derivatives (25 ms Hamming window, 10 ms hop; within-fold z-score normalized)</td></tr>
+<tr><td>26</td><td class='l'>Dynamic Log-Energy Kinematics</td><td class='l'><code>std_delta_log_energy</code></td><td class='l'><code>std_delta_log_energy</code></td><td class='l'>Frame-level log-energy and 1st/2nd temporal derivatives (25 ms Hamming window, 10 ms hop; within-fold z-score normalized)</td></tr>
+<tr><td>27</td><td class='l'>Dynamic Log-Energy Kinematics</td><td class='l'><code>std_delta_delta_log_energy</code></td><td class='l'><code>std_delta_delta_log_energy</code></td><td class='l'>Frame-level log-energy and 1st/2nd temporal derivatives (25 ms Hamming window, 10 ms hop; within-fold z-score normalized)</td></tr>
+  </tbody>
+</table>
+
+<p><b>Table S3 (Static vs. Dynamic MFCC Correspondence and Polarity Analysis):</b> Beyond the 27 shared perturbation, formant, and energy features in Table S2, both TR and BN extract 13 static Mel-Frequency Cepstral Coefficients (<code>mean_MFCC_0th_coef</code>&ndash;<code>mean_MFCC_12th_coef</code> in TR vs. <code>MFCC_1</code>&ndash;<code>MFCC_13</code> in BN) and their first-order temporal derivatives (<code>mean_1st_delta</code>&ndash;<code>mean_12th_delta</code> in TR vs. <code>Delta_MFCC_1</code>&ndash;<code>Delta_MFCC_12</code> in BN). As shown in Section IV-D and Fig. 5(c) of the main manuscript, static spectral envelope coefficients such as <code>MFCC_2</code> preserve consistent positive effect directionality across languages (TR Cohen's <i>d</i> = +0.95; BN Cohen's <i>d</i> = +0.96), whereas first-order cepstral velocities (<code>Delta_MFCC_2</code>) invert sign between sustained vowel phonation (<i>d</i> = &minus;0.24 in TR) and spontaneous conversation (<i>d</i> = +0.96 in BN) due to stationary vocal tract rigidity versus dynamic articulatory transition undershoot.</p>
+
+<h2 style="page-break-before: always;">Section S4. Supplementary Confusion Matrices and Training Convergence Curves</h2>
+<div class="fig">
+  <img src="file:///d:/Perkinson disease/figures/FigS1_Confusion_Matrices.png" alt="Supplementary Fig. S1 Confusion Matrices">
+  <div class="cap"><b>Supplementary Fig. S1.</b> Out-of-fold patient-wise confusion matrices comparing unadjusted threshold classification (<i>&tau;</i> = 0.50, top row) against inner-fold Youden's <i>&tau;</i><sup>*</sup> threshold calibration and subject-level voting (bottom row) across Turkish (TR), Bengali (BN), and English Oxford (OX) cohorts.</div>
+</div>
+
+<div class="fig">
+  <img src="file:///d:/Perkinson disease/figures/FigS2_Training_Convergence.png" alt="Supplementary Fig. S2 Training Convergence">
+  <div class="cap"><b>Supplementary Fig. S2.</b> Training dynamics across 60 epochs on the Turkish (TR) cohort: <b>(a)</b> Cross-entropy training loss convergence comparing KAN (<code>[753, 8, 2]</code>), MLP (<code>[753, 64, 32, 2]</code>), and FT-Transformer; <b>(b)</b> Out-of-fold patient-wise ROC-AUC progression across training epochs.</div>
+</div>
+
+</body>
+</html>
